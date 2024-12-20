@@ -4,10 +4,10 @@
 
 local map = vim.keymap.set
 
-map("n", "<C-n>", "<C-w>h", { desc = "Go to Left Window", remap = true })
-map("n", "<C-e>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
-map("n", "<C-i>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
-map("n", "<C-o>", "<C-w>l", { desc = "Go to Right Window", remap = true })
+map("n", "<S-Left>", "<C-w>h", { desc = "Go to Left Window", remap = true })
+map("n", "<S-Down>", "<C-w>j", { desc = "Go to Lower Window", remap = true })
+map("n", "<S-Up>", "<C-w>k", { desc = "Go to Upper Window", remap = true })
+map("n", "<S-Right>", "<C-w>l", { desc = "Go to Right Window", remap = true })
 
-map("n", "<S-n>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
-map("n", "<S-o>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+map("n", "<C-n>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
+map("n", "<C-o>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
