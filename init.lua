@@ -33,7 +33,6 @@ vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.breakindent = true
 vim.opt.textwidth = 80
-vim.opt.colorcolumn = '80'
 vim.opt.shiftwidth = 3
 vim.opt.clipboard = vim.env.SSH_TTY and '' or 'unnamedplus'
 
