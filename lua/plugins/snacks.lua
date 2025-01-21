@@ -4,9 +4,9 @@ return {
   lazy = false,
   ---@type snacks.Config
   opts = {
-    bigfile = { enabled = true },
+    bigfile = { enabled = false },
     dashboard = { enabled = true },
-    indent = { enabled = true },
+    indent = { enabled = false },
     input = { enabled = false },
     notifier = { enabled = true },
     quickfile = { enabled = false },
