@@ -7,7 +7,7 @@ return { -- You can easily change to a different colorscheme.
   priority = 1000, -- Make sure to load this before all the other start plugins.
   opts = {
     transparent_mode = true,
-    contrast = 'hard',
+    contrast = '',
     italic = {
       strings = false,
       emphasis = false,
