@@ -5,6 +5,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.g.autoformat = true
 vim.g.snacks_animate = false
+vim.g.cmdheight = 0
 vim.wo.relativenumber = true
 
 vim.opt.termguicolors = true
@@ -43,6 +44,8 @@ vim.opt.breakindent = true
 vim.opt.textwidth = 80
 vim.opt.shiftwidth = 3
 vim.opt.clipboard = vim.env.SSH_TTY and '' or 'unnamedplus'
+
+vim.keymap.set('n', 'o', '<cmd>Telescope find_files<cr>')
 
 -- Basic stuff
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
