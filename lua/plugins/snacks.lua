@@ -4,14 +4,14 @@ return {
   lazy = false,
   ---@type snacks.Config
   opts = {
-    bigfile = { enabled = false },
+    bigfile = { enabled = true },
     dashboard = { enabled = true },
     indent = { enabled = false },
-    input = { enabled = false },
+    input = { enabled = true },
     notifier = { enabled = true },
-    quickfile = { enabled = false },
-    scroll = { enabled = false },
-    statuscolumn = { enabled = false },
-    words = { enabled = false },
+    quickfile = { enabled = true },
+    scroll = { enabled = true },
+    statuscolumn = { enabled = true },
+    words = { enabled = true },
   },
 }
