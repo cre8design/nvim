@@ -16,7 +16,7 @@ return {
           accept_line = false,
           next = '<M-e>',
           prev = '<M-i>',
-          dismiss = '<C-n>',
+          dismiss = '<M-n>',
         },
       },
     },
