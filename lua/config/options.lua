@@ -3,15 +3,16 @@
 -- Add any additional options here
 
 vim.g.snacks_animate = false
-vim.g.snacks_indent = false
+vim.g.snacks_indent = true
 vim.g.autoformat = true
 vim.wo.relativenumber = true
-vim.opt.list = true
+vim.opt.list = false
 vim.opt.listchars = {
-	tab = "│ ",
+	tab = "│┈",
+	eol = "↲",
 	trail = "·",
 	nbsp = "·",
-	space = " ",
+	space = "·",
 	multispace = "·",
 	lead = "·",
 }

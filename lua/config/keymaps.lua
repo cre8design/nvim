@@ -84,3 +84,7 @@ end, { desc = "Delete Buffer" })
 vim.keymap.set("n", "<leader>bo", function()
 	Snacks.bufdelete.other()
 end, { desc = "Delete Other Buffers" })
+
+vim.keymap.set("n", "<leader>ul", function()
+	vim.o.list = not vim.o.list
+end)
