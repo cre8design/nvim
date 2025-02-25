@@ -1,12 +1,6 @@
 return {
 	"saghen/blink.nvim",
-	opts = {
-		sources = {
-			providers = {
-				copilot = {
-					enabled = false,
-				},
-			},
-		},
-	},
+	opts = function(_, opts)
+		return opts
+	end,
 }
