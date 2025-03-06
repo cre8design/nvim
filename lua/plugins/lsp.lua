@@ -5,5 +5,8 @@ return {
 		inlay_hints = { enabled = false },
 		codelens = { enabled = true },
 		diagnostics = { virtual_text = false },
+		ensure_installed = {
+			"graphql-language-service-cli",
+		},
 	},
 }
