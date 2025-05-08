@@ -32,6 +32,13 @@ return {
 			desc = "Code Action",
 			mode = { "n", "v" },
 		},
+		-- {
+		-- 	"<leader>cA",
+		-- 	Util.lsp.action.source,
+		-- 	desc = "Code Action (Source)",
+		-- 	mode = { "n" },
+		-- 	has = "codeAction",
+		-- },
 		{
 			"<leader>cc",
 			vim.lsp.codelens.run,

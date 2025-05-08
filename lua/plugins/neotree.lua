@@ -13,4 +13,15 @@ return {
 	opts = {
 		-- fill any relevant options here
 	},
+	keys = {
+		{
+			"<leader>e",
+			function()
+				require("neo-tree.command").execute({
+					toggle = true,
+				})
+			end,
+			desc = "Explorer NeoTree (Root Dir)",
+		},
+	},
 }

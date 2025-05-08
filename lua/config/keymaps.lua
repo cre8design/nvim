@@ -1,3 +1,4 @@
+-- Split Window
 vim.keymap.set("n", "<leader>w", "<c-w>", { desc = "Windows", remap = true })
 vim.keymap.set(
 	"n",
@@ -74,10 +75,6 @@ vim.keymap.set(
 vim.keymap.set("n", "<C-n>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 vim.keymap.set("n", "<C-o>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 
-vim.keymap.set("n", "<leader>ul", function()
-	vim.o.list = not vim.o.list
-end)
-
 -- Diagnostics
 vim.keymap.set(
 	"n",
@@ -85,29 +82,23 @@ vim.keymap.set(
 	vim.diagnostic.open_float,
 	{ desc = "Line Diagnostics" }
 )
-vim.keymap.set("n", "]d", diagnostic_goto(true), { desc = "Next Diagnostic" })
-vim.keymap.set("n", "[d", diagnostic_goto(false), { desc = "Prev Diagnostic" })
 vim.keymap.set(
 	"n",
-	"]e",
-	diagnostic_goto(true, "ERROR"),
-	{ desc = "Next Error" }
+	"]d",
+	Util.diagnostics.to(true, "ERROR"),
+	{ desc = "Next Diagnostic" }
 )
 vim.keymap.set(
 	"n",
-	"[e",
-	diagnostic_goto(false, "ERROR"),
-	{ desc = "Prev Error" }
+	"[d",
+	Util.diagnostics.to(false, "ERROR"),
+	{ desc = "Prev Diagnostic" }
 )
-vim.keymap.set(
-	"n",
-	"]w",
-	diagnostic_goto(true, "WARN"),
-	{ desc = "Next Warning" }
-)
-vim.keymap.set(
-	"n",
-	"[w",
-	diagnostic_goto(false, "WARN"),
-	{ desc = "Prev Warning" }
-)
+
+-- Toggle Vim Options
+vim.keymap.set("n", "<leader>ul", function()
+	vim.o.list = not vim.o.list
+end)
+vim.keymap.set("n", "<leader>uw", function()
+	vim.o.wrap = not vim.o.wrap
+end)

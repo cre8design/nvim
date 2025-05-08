@@ -35,7 +35,7 @@ vim.opt.fillchars = {
 	eob = " ",
 }
 vim.opt.foldlevel = 99
-vim.opt.formatexpr = "v:lua.require'lazyvim.util'.format.formatexpr()"
+vim.opt.formatexpr = "v:lua.require'conform'.formatexpr()"
 vim.opt.formatoptions = "jcroqlnt"
 vim.opt.grepformat = "%f:%l:%c:%m"
 vim.opt.grepprg = "rg --vimgrep"
@@ -70,7 +70,6 @@ vim.opt.spelllang = { "en" }
 vim.opt.splitbelow = true
 vim.opt.splitkeep = "screen"
 vim.opt.splitright = true
-vim.opt.statuscolumn = [[%!v:lua.require'snacks.statuscolumn'.get()]]
 vim.opt.termguicolors = true
 vim.opt.timeoutlen = vim.g.vscode and 1000 or 300
 vim.opt.undofile = true
