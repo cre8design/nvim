@@ -22,7 +22,9 @@ return {
 			fish = { "fish_indent" },
 			sh = { "shfmt" },
 		},
-		format_on_save = { timeout_ms = 500 },
+		format_on_save = {
+			timeout_ms = 500,
+		},
 		notify_on_error = true,
 		notify_no_formatters = true,
 	},

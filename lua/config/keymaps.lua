@@ -77,3 +77,37 @@ vim.keymap.set("n", "<C-o>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<leader>ul", function()
 	vim.o.list = not vim.o.list
 end)
+
+-- Diagnostics
+vim.keymap.set(
+	"n",
+	"<leader>cd",
+	vim.diagnostic.open_float,
+	{ desc = "Line Diagnostics" }
+)
+vim.keymap.set("n", "]d", diagnostic_goto(true), { desc = "Next Diagnostic" })
+vim.keymap.set("n", "[d", diagnostic_goto(false), { desc = "Prev Diagnostic" })
+vim.keymap.set(
+	"n",
+	"]e",
+	diagnostic_goto(true, "ERROR"),
+	{ desc = "Next Error" }
+)
+vim.keymap.set(
+	"n",
+	"[e",
+	diagnostic_goto(false, "ERROR"),
+	{ desc = "Prev Error" }
+)
+vim.keymap.set(
+	"n",
+	"]w",
+	diagnostic_goto(true, "WARN"),
+	{ desc = "Next Warning" }
+)
+vim.keymap.set(
+	"n",
+	"[w",
+	diagnostic_goto(false, "WARN"),
+	{ desc = "Prev Warning" }
+)

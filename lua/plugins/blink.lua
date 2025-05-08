@@ -16,13 +16,14 @@ return {
 			},
 		},
 		sources = {
-			compat = {},
 			default = { "lsp", "path" },
 		},
 		appearance = {
 			nerd_font_variant = "mono",
 		},
-		fuzzy = { implementation = "lua" },
+		fuzzy = {
+			implementation = "lua",
+		},
 		keymap = {
 			preset = "enter",
 		},
