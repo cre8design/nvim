@@ -2,6 +2,7 @@ return {
 	{
 		"ellisonleao/gruvbox.nvim",
 		opts = {
+			terminal_colors = true,
 			transparent_mode = false,
 			italic = {
 				strings = false,

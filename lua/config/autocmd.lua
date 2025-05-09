@@ -5,8 +5,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 			apply = true,
 			context = {
 				only = {
-					"source.addMissingImports.ts",
-					"source.organizeImports.ts",
+					"source.removeUnusedImports.ts",
 				},
 				diagnostics = {},
 			},

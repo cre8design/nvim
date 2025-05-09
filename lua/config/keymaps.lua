@@ -212,3 +212,19 @@ vim.keymap.set(
 	"O<esc>Vcx<esc><cmd>normal gcc<cr>fxa<bs>",
 	{ desc = "Add Comment Above" }
 )
+
+vim.keymap.set("n", "<leader>cf", function()
+	vim.lsp.buf.code_action({
+		apply = true,
+		context = {
+			only = {
+				"source.sortImports.ts",
+				"source.removeUnusedImports.ts",
+				"source.addMissingImports.ts",
+				"source.removeUnused.ts",
+				"source.fixAll.ts",
+			},
+			diagnostics = {},
+		},
+	})
+end, { desc = "Code Action (Source)" })
