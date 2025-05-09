@@ -213,6 +213,7 @@ vim.keymap.set(
 	{ desc = "Add Comment Above" }
 )
 
+-- LSP
 vim.keymap.set("n", "<leader>cf", function()
 	vim.lsp.buf.code_action({
 		apply = true,
@@ -228,3 +229,5 @@ vim.keymap.set("n", "<leader>cf", function()
 		},
 	})
 end, { desc = "Code Action (Source)" })
+
+vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, { desc = "Rename" })

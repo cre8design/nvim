@@ -54,6 +54,13 @@ return {
 			desc = "Notification History",
 		},
 		{
+			"<leader>e",
+			function()
+				Snacks.explorer()
+			end,
+			desc = "File Explorer",
+		},
+		{
 			"<leader>bd",
 			function()
 				Snacks.bufdelete()
