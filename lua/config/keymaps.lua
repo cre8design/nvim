@@ -214,7 +214,7 @@ vim.keymap.set(
 )
 
 -- LSP
-vim.keymap.set("n", "<leader>cf", function()
+vim.keymap.set("n", "<leader>cA", function()
 	vim.lsp.buf.code_action({
 		apply = true,
 		context = {
@@ -231,3 +231,12 @@ vim.keymap.set("n", "<leader>cf", function()
 end, { desc = "Code Action (Source)" })
 
 vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, { desc = "Rename" })
+
+-- Doge
+vim.keymap.set("n", "<Leader>d", "<Plug>(doge-generate)")
+vim.keymap.set("n", "<TAB>", "<Plug>(doge-comment-jump-forward)")
+vim.keymap.set("n", "<S-TAB>", "<Plug>(doge-comment-jump-backward)")
+vim.keymap.set("i", "<TAB>", "<Plug>(doge-comment-jump-forward)")
+vim.keymap.set("i", "<S-TAB>", "<Plug>(doge-comment-jump-backward)")
+vim.keymap.set("x", "<TAB>", "<Plug>(doge-comment-jump-forward)")
+vim.keymap.set("x", "<S-TAB>", "<Plug>(doge-comment-jump-backward)")
