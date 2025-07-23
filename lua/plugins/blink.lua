@@ -14,6 +14,21 @@ return {
 					enabled = true,
 				},
 			},
+			menu = {
+				auto_show = true,
+				draw = {
+					columns = {
+						{ "label", "label_description", gap = 1 },
+						{ "kind_icon", "kind", "source_name", gap = 1 },
+					},
+				},
+			},
+			documentation = {
+				auto_show = true,
+			},
+			ghost_text = {
+				enabled = true,
+			},
 		},
 		sources = {
 			default = { "lsp", "path" },

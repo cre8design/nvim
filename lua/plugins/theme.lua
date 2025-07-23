@@ -6,6 +6,7 @@ return {
 		vim.cmd.colorscheme("gruvbox-baby")
 	end,
 }
+
 -- return {
 -- 	"sainnhe/gruvbox-material",
 -- 	lazy = false,
@@ -21,5 +22,14 @@ return {
 -- 		vim.g.gruvbox_material_transparent_background = "0"
 -- 		vim.o.background = "dark"
 -- 		vim.cmd.colorscheme("gruvbox-material")
+-- 	end,
+-- }
+
+-- return {
+-- 	"ellisonleao/gruvbox.nvim",
+-- 	priority = 1000,
+-- 	config = function()
+-- 		vim.o.background = "dark"
+-- 		vim.cmd([[colorscheme gruvbox]])
 -- 	end,
 -- }
