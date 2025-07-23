@@ -33,17 +33,42 @@ return {
 			mode = { "n", "v" },
 		},
 		{
-			"<leader>cc",
-			vim.lsp.codelens.run,
-			desc = "Run Codelens",
-			mode = { "n", "v" },
+			"gd",
+			vim.lsp.buf.definition,
+			desc = "Goto Definition",
 		},
 		{
-			"<leader>cC",
-			vim.lsp.codelens.refresh,
-			desc = "Refresh & Display Codelens",
-			mode = { "n" },
+			"gr",
+			vim.lsp.buf.references,
+			desc = "References",
 		},
+		{
+			"gi",
+			vim.lsp.buf.implementation,
+			desc = "Goto Implementation",
+		},
+		{
+			"gy",
+			vim.lsp.buf.type_definition,
+			desc = "Goto T[y]pe Definition",
+		},
+		{
+			"gD",
+			vim.lsp.buf.declaration,
+			desc = "Goto Declaration",
+		},
+		-- {
+		-- 	"<leader>cc",
+		-- 	vim.lsp.codelens.run,
+		-- 	desc = "Run Codelens",
+		-- 	mode = { "n", "v" },
+		-- },
+		-- {
+		-- 	"<leader>cC",
+		-- 	vim.lsp.codelens.refresh,
+		-- 	desc = "Refresh & Display Codelens",
+		-- 	mode = { "n" },
+		-- },
 	},
 	config = function(_, opts)
 		require("mason-lspconfig").setup({
