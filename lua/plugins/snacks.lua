@@ -1,3 +1,14 @@
+-- Terminal Mappings
+local function term_nav(dir)
+	---@param self snacks.terminal
+	return function(self)
+		return self:is_floating() and "<c-" .. dir .. ">"
+			or vim.schedule(function()
+				vim.cmd.wincmd(dir)
+			end)
+	end
+end
+
 return {
 	"folke/snacks.nvim",
 	priority = 1000,
@@ -6,16 +17,50 @@ return {
 		bigfile = { enabled = true },
 		dashboard = { enabled = true },
 		explorer = { enabled = false },
-		indent = { enabled = false },
+		indent = { enabled = true },
 		input = { enabled = true },
 		picker = { enabled = true },
 		notifier = { enabled = true },
 		quickfile = { enabled = true },
 		scope = { enabled = false },
-		scroll = { enabled = false },
+		scroll = { enabled = true },
 		statuscolumn = { enabled = false },
-		words = { enabled = false },
-		terminal = { enabled = true },
+		words = { enabled = true },
+		terminal = {
+			enabled = true,
+			win = {
+				keys = {
+					nav_h = {
+						"<S-Left>",
+						term_nav("h"),
+						desc = "Go to Left Window",
+						expr = true,
+						mode = "t",
+					},
+					nav_j = {
+						"<S-Right>",
+						term_nav("j"),
+						desc = "Go to Lower Window",
+						expr = true,
+						mode = "t",
+					},
+					nav_k = {
+						"<S-Down>",
+						term_nav("k"),
+						desc = "Go to Upper Window",
+						expr = true,
+						mode = "t",
+					},
+					nav_l = {
+						"<S-Up>",
+						term_nav("l"),
+						desc = "Go to Right Window",
+						expr = true,
+						mode = "t",
+					},
+				},
+			},
+		},
 	},
 	keys = {
 		{
@@ -111,11 +156,18 @@ return {
 			desc = "Goto T[y]pe Definition",
 		},
 		{
-			"<c-/>",
+			"<leader>tt",
 			function()
 				Snacks.terminal()
 			end,
 			desc = "Toggle Terminal",
+			mode = "n",
+		},
+		{
+			"<C-q>",
+			"<cmd>close<cr>",
+			desc = "Close Terminal",
+			mode = "t",
 		},
 	},
 }
