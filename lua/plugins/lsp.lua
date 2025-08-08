@@ -7,7 +7,7 @@ return {
 	event = { "BufReadPost", "BufWritePost", "BufNewFile" },
 	opts = {
 		inlay_hints = { enabled = false },
-		codelens = { enabled = true },
+		codelens = { enabled = false },
 		diagnostics = { virtual_text = false },
 	},
 	keys = {
@@ -32,18 +32,18 @@ return {
 			desc = "Code Action",
 			mode = { "n", "v" },
 		},
-		{
-			"<leader>cc",
-			vim.lsp.codelens.run,
-			desc = "Run Codelens",
-			mode = { "n", "v" },
-		},
-		{
-			"<leader>cC",
-			vim.lsp.codelens.refresh,
-			desc = "Refresh & Display Codelens",
-			mode = { "n" },
-		},
+		-- {
+		-- 	"<leader>cc",
+		-- 	vim.lsp.codelens.run,
+		-- 	desc = "Run Codelens",
+		-- 	mode = { "n", "v" },
+		-- },
+		-- {
+		-- 	"<leader>cC",
+		-- 	vim.lsp.codelens.refresh,
+		-- 	desc = "Refresh & Display Codelens",
+		-- 	mode = { "n" },
+		-- },
 	},
 	config = function(_, opts)
 		require("mason-lspconfig").setup({
