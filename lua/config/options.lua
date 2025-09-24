@@ -10,3 +10,5 @@ vim.opt.breakindent = true
 vim.opt.textwidth = 80
 vim.opt.shiftwidth = 3
 vim.opt.list = false
+
+vim.diagnostic.enable(false)
