@@ -4,11 +4,9 @@
 
 vim.opt.expandtab = false
 vim.opt.tabstop = 3
-vim.opt.wrap = true
+vim.opt.wrap = false
 vim.opt.linebreak = true
 vim.opt.breakindent = true
 vim.opt.textwidth = 80
 vim.opt.shiftwidth = 3
 vim.opt.list = false
-
-vim.diagnostic.enable(false)

@@ -11,3 +11,11 @@ vim.keymap.set("n", "<S-Up>", "<C-w><C-k>", { desc = "Move focus to the upper wi
 -- Buffers
 vim.keymap.set("n", "<C-n>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 vim.keymap.set("n", "<C-o>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+
+-- :TailwindFoldToggle
+vim.keymap.set("n", "<leader>ut", "<cmd>TailwindFoldToggle<cr>", { desc = "Toggle Tailwind Fold" })
+
+vim.keymap.set("i", "<C-o>", "<cmd>Copilot suggestion accept<cr>", { desc = "Accept copilot suggestion" })
+vim.keymap.set("i", "<C-e>", "<cmd>Copilot suggestion next<cr>", { desc = "Accept copilot suggestion" })
+vim.keymap.set("i", "<C-i>", "<cmd>Copilot suggestion prev<cr>", { desc = "Accept copilot suggestion" })
+vim.keymap.set("i", "<C-n>", "<cmd>Copilot suggestion dismiss<cr>", { desc = "Accept copilot suggestion" })
